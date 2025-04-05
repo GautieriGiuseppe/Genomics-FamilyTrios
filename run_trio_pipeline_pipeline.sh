@@ -63,3 +63,42 @@ for case in "${cases[@]}"; do
 done
 
 echo "Pipeline finished!"
+
+###########################################################################################################
+
+# selecting rows by AD/AR mutations
+
+ case =  ("case747" "case685" "case714" "case629" "case723" "case584" "case688" "case696" "case590" "case730")
+  
+# for dominant
+    grep "0/0.*0/0.*0/1" "VCF_outputs_${case}/${case}_annotated.vcf" > "VCF_outputs_${case}/${case}_dominant.vcf"
+#for recessive
+    grep "0/0.*0/0.*1/1" "VCF_outputs_${case}/${case}_annotated.vcf" > "VCF_outputs_${case}/${case}_recessive.vcf"
+
+#example
+grep "#" case747_trio.vcf > case747_recessive.vcf
+grep "1/1.*0/1.*0/1" case747_filtered.vcf >> case747_recessive.vcf
+
+grep "#" case747_trio.vcf > case747_dominant.vcf
+grep "0/1.*0/0.*0/0" case747_filtered.vcf >> case747_dominant.vcf
+
+###########################################################################################################
+
+#coverage per ucsc genome browser
+
+cases=("case747" "case685" "case714" "case629" "case723" "case584" "case688" "case696" "case590" "case730")
+
+for case in "${cases[@]}"; do
+	
+    mkdir coverage_"${case}"
+
+    bedtools genomecov -ibam /home/BCG2025_cacciaR/all_var/"${case}_child_sorted.bam" -bg -trackline -trackopts 'name="child"' -max 100 > "coverage_${case}/child${case}Cov.bg"
+
+    bedtools genomecov -ibam /home/BCG2025_cacciaR/all_var/"${case}_mother_sorted.bam" -bg -trackline -trackopts 'name="mother"' -max 100 > "coverage_${case}/mother${case}Cov.bg"
+
+    bedtools genomecov -ibam /home/BCG2025_cacciaR/all_var/"${case}_father_sorted.bam" -bg -trackline -trackopts 'name="father"' -max 100 > "coverage_${case}/father${case}Cov.bg"
+
+done
+
+echo "Pipeline finished!"
+
