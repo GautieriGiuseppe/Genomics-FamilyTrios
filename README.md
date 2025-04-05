@@ -1,4 +1,10 @@
 # Genomics-FamilyTrios
+
 Workflow of Genomics analysis of Rare mendelian diseases in simulated data in family trios.
-The analysis was conducted on a cohort of 10 patients, each suspected of being affected by an autosomal disease, along with
-their parents.
+
+##Project Background
+This project involves the analysis of simulated genome sequencing data, specifically exome sequencing, to identify rare genetic disorders in 10 individuals.
+The goal is to achieve a molecular diagnosis through the use of bioinformatics tools and variant interpretation workflows.
+
+##Authors 
+This work was conducted by [Giuseppe Gautieri](https://github.com/GiuseppeGautieri) and [Riccardo Caccia](https://github.com/riccardocaccia).
