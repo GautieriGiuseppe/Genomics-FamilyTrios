@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#list of cases
 cases=("case747" "case685" "case714" "case629" "case723" "case584" "case688" "case696" "case590" "case730")
 
 REFERENCE="/home/BCG2025_genomics_exam/universe.fasta"
