@@ -1,19 +1,19 @@
-#!/bin/bash
-
-#list of cases
+#list of assigned cases
 cases=("case747" "case685" "case714" "case629" "case723" "case584" "case688" "case696" "case590" "case730")
 
+#path for useful file
 REFERENCE="/home/BCG2025_genomics_exam/universe.fasta"
 BOWTIE_INDEX="/home/BCG2025_cacciaR/all_var/uni"
 EXONS_BED="/home/BCG2025_genomics_exam/exons16Padded_sorted.bed"
 VEP_CACHE="/home/BCG2025_genomics_exam/vep_cache"
 
-# Creazione dell'indice per Bowtie2 (se non già presente spero)
+# index creation if not present
 if [ ! -f "${BOWTIE_INDEX}.1.bt2" ]; then
     echo "Building Bowtie2 index..."
     bowtie2-build "$REFERENCE" "$BOWTIE_INDEX"
 fi
 
+#loop for every case
 for case in "${cases[@]}"; do
     echo "Processing $case..."
 
