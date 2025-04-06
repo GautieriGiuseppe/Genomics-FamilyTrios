@@ -1,4 +1,4 @@
-# link to visualize each case report
+# link to visualize each cases report
 
 [case 584]()
 [case 590]()
