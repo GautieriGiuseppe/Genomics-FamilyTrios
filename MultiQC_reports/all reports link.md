@@ -1,6 +1,6 @@
 # Link to visualize the report of each case
 
-[case 584]()
+[case 584](Genomics-FamilyTrios/MultiQC_reports/case584.html)<br>
 [case 590]()
 [case 629]()
 [case 685]()
