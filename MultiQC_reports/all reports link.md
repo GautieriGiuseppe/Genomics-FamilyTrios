@@ -1,6 +1,6 @@
 # Link to visualize the report of each case
 
-- [case 584](https://github.com/GautieriGiuseppe/Genomics-FamilyTrios/blob/main/MultiQC_reports/case584.html)<br>
+- [case 584](https://gautierigiuseppe.github.io/Genomics-FamilyTrios/MultiQC_reports/case584.html)<br>
 - [case 590](https://github.com/GautieriGiuseppe/Genomics-FamilyTrios/blob/main/MultiQC_reports/case590.html)<br>
 - [case 629](https://github.com/GautieriGiuseppe/Genomics-FamilyTrios/blob/main/MultiQC_reports/case629.html)<br>
 - [case 685](https://github.com/GautieriGiuseppe/Genomics-FamilyTrios/blob/main/MultiQC_reports/case685.html)<br>
